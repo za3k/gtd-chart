@@ -1,0 +1,9 @@
+#!/bin/bash
+rm -fr ~/.gtd/temp
+mkdir ~/.gtd/temp
+gtd.py --top-level-goals --omit-tally|while read file
+do
+    gtd.py --graph --focus "$file" >~/.gtd/temp/"$file"
+done 
+sleep 2 
+feh ~/.gtd/temp

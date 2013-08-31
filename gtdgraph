@@ -1,0 +1,4 @@
+#!/bin/bash
+gtd.py --graph "$@" >~/gtd.png
+sleep 2 
+feh ~/gtd.png
